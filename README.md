@@ -2,7 +2,7 @@
 
 Dicro is a pattern-aware universal compression toolkit inspired by the Universal Pattern Engine concept: generate, transform, analyze, and discover sequence structure before selecting a compression strategy.
 
-It is designed as a research-friendly, production-minded compression library with reusable sequence analysis and multiple classical algorithms in one unified engine.
+It is designed as a research-friendly, production-minded compression library with reusable sequence analysis and a complete compression stack for text, binary, numeric, and structured data.
 
 ## Motivation
 
@@ -14,13 +14,19 @@ The repository combines a few core ideas from the pattern-engine reference proje
 - algorithm selection based on structure
 - a single engine for encode/decode workflows
 
-## Included algorithms
+## Included algorithms and components
 
 - Run-length encoding (RLE)
 - Delta encoding
+- XOR transform
+- Bit-packing / numeric packing
 - Huffman coding
 - Arithmetic coding
 - LZ77 dictionary compression
+- Burrows-Wheeler transform (BWT)
+- Move-to-front transform (MTF)
+- pattern analysis and normalization for text, bytes, JSON, numbers, and lists
+- single-engine selector for choosing the best strategy by payload profile
 
 ## Project structure
 
